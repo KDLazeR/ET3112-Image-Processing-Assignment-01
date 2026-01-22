@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 # load the runway image in grayscale
 img = cv2.imread('images/runway.png', cv2.IMREAD_GRAYSCALE)
 
-# safety check
 if img is None:
     print("error: cant find the image file")
 else:
