@@ -69,12 +69,10 @@ else:
     sigma_s = 100  # Spatial Sigma (Large blur)
     sigma_r = 100  # Range Sigma (How strictly to keep edges)
 
-    # (b) Apply Gaussian Blur (for comparison)
-    # Gaussian blurs EVERYTHING, including edges
+    # (b) Apply Gaussian Blur 
     img_gaussian = cv2.GaussianBlur(img, (d, d), sigma_s)
 
     # (c) Apply OpenCV Bilateral Filter
-    # Fast and optimized
     img_cv_bilateral = cv2.bilateralFilter(img, d, sigma_s, sigma_r)
 
     # (d) Apply Manual Bilateral Filter
